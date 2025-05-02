@@ -1,0 +1,17 @@
+<html>
+<head>
+  <title>Flash Cross-Domain Policy PoC</title>
+</head>
+<body>
+  <h1>Test Cross-Domain Access</h1>
+  <script>
+    fetch('https://support.oppo.com/crossdomain.xml')
+      .then(response => response.text())
+      .then(data => {
+        console.log('Policy:', data);
+        alert('Data fetched successfully');
+      })
+      .catch(error => console.log('Error:', error));
+  </script>
+</body>
+</html>
